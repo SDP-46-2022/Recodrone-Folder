@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find hector_slam_launch)/launch/tutorial.launch"/>
+    <include file="$(find rviz_web)/launch/camera.launch"/>
+    <include file="$(find rviz_web)/launch/web_server.launch"/>
+</launch>
