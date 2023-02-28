@@ -135,7 +135,7 @@
                         </div>
                         <div class="content-box">
                             <img src="static/img/device-ram.svg" alt="" class="fcu-img">
-                            <p class="fcu-status">CONNECTED</p>
+                            <p class="fcu-status">{{ telemetry.connected }}</p>
                         </div>
                     </div>
                     <div class="info-break"></div>
@@ -145,7 +145,7 @@
                         </div>
                         <div class="content-box">
                             <img src="static/img/armed.svg" alt="" class="arm-img">
-                            <p class="arm-status">UNARMED</p>
+                            <p class="arm-status">{{ telemetry.armed }}</p>
                         </div>
                     </div>
                     <div class="info-break"></div>
@@ -191,17 +191,17 @@
                             <div class="coordinate-box">
                                 <img src="static/img/axis-x-letter.svg" alt="" class="letter">
                                 <img src="static/img/axis-x.svg" alt="" class="graph">
-                                <p class="coord">0.327 M</p>
+                                <p class="coord">{{ telemetry.x }} M</p>
                             </div>
                             <div class="coordinate-box">
                                 <img src="static/img/axis-y-letter.svg" alt="" class="letter">
                                 <img src="static/img/axis-y.svg" alt="" class="graph">
-                                <p class="coord">2.348 M</p>
+                                <p class="coord">{{ telemetry.y }} M</p>
                             </div>
                             <div class="coordinate-box">
                                 <img src="static/img/axis-z-letter.svg" alt="" class="letter">
                                 <img src="static/img/axis-z.svg" alt="" class="graph">
-                                <p class="coord">0.859 M</p>
+                                <p class="coord">{{ telemetry.z }} M</p>
                             </div>
                         </div>
                     </div>

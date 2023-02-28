@@ -1,7 +1,8 @@
 from flask import render_template, flash, redirect, url_for, request
 from recodroneapplication import app, bcrypt
 from recodroneapplication.forms import LoginForm
-from recodroneapplication.models import User, Drone
+from recodroneapplication.models import User, Drone, Telemetry
+from recodroneapplication.drone_info import Drone_Info
 from flask_login import login_user, current_user, logout_user, login_required
 
 
@@ -34,7 +35,10 @@ def logout():
 @app.route('/dashboard')
 @login_required
 def dashboard():
+    drone_info = Drone_Info()
     drone = Drone.query.filter_by(owner=current_user).first()
-    return render_template('dashboard.html', title='RecoDrone-Dashboard', drone=drone)
+    # telemetry = Telemetry.query.filter_by(drone=drone).first()
+    telemetry = drone_info.get_telemetry()
+    return render_template('dashboard.html', title='RecoDrone-Dashboard', drone=drone, telemetry=telemetry)
 
 

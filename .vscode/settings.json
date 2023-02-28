@@ -1,4 +1,7 @@
 {
     "python.defaultInterpreterPath": "C:\\Users\\hadea\\Desktop\\Code\\Environments\\drone_env\\Scripts",
-    "javascript.validate.enable": false
+    "javascript.validate.enable": false,
+    "cSpell.words": [
+        "rospy"
+    ]
 }
